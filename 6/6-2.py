@@ -8,3 +8,4 @@ add(2,3)
 add('a',0)
 
 #branch操作の練習
+#mergeできてる？
