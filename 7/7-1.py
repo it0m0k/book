@@ -5,18 +5,22 @@ class AddressBook:
 
     def add(self,person):
         self.person_list.append(person)
+        print(person.lastname+"の情報を追加しました．")
     
     def show(self):
         print("------name information-------")
+        if self.person_list == []:
+            print("情報がありません\n")
         for person in self.person_list:
-            print(person.lastname+" "+person.firstname)
-            
-    
+                print(person.lastname+" "+person.firstname)
+        print("\n")
+
     def serch(self,key):
         print("------hit information-------")
         for person in self.person_list:
             if key in person.firstname or key in person.lastname:
                 print(person.lastname+" "+person.firstname)
+        print("\n")
 
 
 class Person:
@@ -44,10 +48,12 @@ p2.birthday = datetime.datetime(2001,4,11)
 
 ab = AddressBook()
 
+ab.show()
+
 ab.add(p1)
 ab.add(p2)
 
-print("アドレス帳の人数: "+str(len(ab.person_list)))
+print("アドレス帳の人数: "+str(len(ab.person_list))+"\n")
 
 ab.show()
 ab.serch('Tomoki')
