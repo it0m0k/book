@@ -50,5 +50,5 @@ ab.add(p2)
 print("アドレス帳の人数: "+str(len(ab.person_list)))
 
 ab.show()
-ab.serch("Tomoki")
+ab.serch('Tomoki')
 
