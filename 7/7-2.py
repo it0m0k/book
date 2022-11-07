@@ -14,8 +14,7 @@ class Addressbook:
         for p in self.person_list:
             if key in p.lastname or key in p.firstname:
                 print(p.firstname+"さんがヒットしました")
-            else:
-                print("ヒットしませんでした")
+                
         
 
 class User:
